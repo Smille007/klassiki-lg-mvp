@@ -1,0 +1,10 @@
+{
+  "id": "com.klassiki.lg.prototype",
+  "version": "1.0.0",
+  "vendor": "My Company",
+  "type": "web",
+  "main": "index.html",
+  "title": "Klassiki Prototype",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png"
+}

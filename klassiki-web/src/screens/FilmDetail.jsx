@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { films } from '../../data/films';
+import { films } from '../data/films';
 
 export default function FilmDetail() {
   const { id } = useParams();

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { films } from '../../data/films';
+import { films } from '../data/films'
 
 export default function Home() {
   const navigate = useNavigate();

@@ -1,26 +1,14 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  font-family: Georgia, 'Times New Roman', serif;
-  background: #ffffff;
-  color: #111111;
-  font-size: 18px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #111;
 }
 
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-/* ── HEADER ── */
+/* HEADER */
 .appHeader {
-  display: flex;
-  align-items: center;
-  padding: 20px 48px;
+  padding: 16px 40px;
   border-bottom: 1px solid #e0e0e0;
   background: #fff;
 }
@@ -28,53 +16,19 @@ button {
 .klassikiLogo {
   font-size: 28px;
   font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #111;
-  font-family: Arial Black, sans-serif;
+  letter-spacing: 3px;
+  font-family: 'Arial Black', Arial, sans-serif;
 }
 
-.klassikiLogo span:nth-child(1) { color: #e63946; }
-.klassikiLogo span:nth-child(2) { color: #111; }
-.klassikiLogo span:nth-child(3) { color: #2196f3; }
-.klassikiLogo span:nth-child(4) { color: #e63946; }
-.klassikiLogo span:nth-child(5) { color: #4caf50; }
-.klassikiLogo span:nth-child(6) { color: #111; }
-.klassikiLogo span:nth-child(7) { color: #ff9800; }
-
-.appMain {
-  padding: 0;
-}
-
-/* ── HOME ── */
-.home {
-  padding: 0;
-}
-
+/* HERO */
 .hero {
-  width: 100%;
-  height: 420px;
-  background: #1a1a2e;
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  background: #111;
   display: flex;
   align-items: flex-end;
-  padding: 48px;
-  position: relative;
-  overflow: hidden;
-}
-
-.heroText {
-  position: relative;
-  z-index: 2;
-  color: white;
-}
-
-.heroText h1 {
-  font-size: 48px;
-  font-weight: 900;
-  line-height: 1.1;
-  max-width: 600px;
-  font-family: Arial Black, sans-serif;
-  text-transform: uppercase;
+  padding: 40px;
 }
 
 .heroBg {
@@ -86,47 +40,59 @@ button {
   opacity: 0.5;
 }
 
-/* ── ROWS ── */
+.heroText {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.heroText h1 {
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: 'Arial Black', Arial, sans-serif;
+  max-width: 600px;
+  line-height: 1.1;
+}
+
+/* SECTIONS */
 .section {
-  padding: 40px 48px;
+  padding: 32px 40px;
 }
 
 .sectionHeader {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 24px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .sectionTitle {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  font-family: Arial, sans-serif;
   letter-spacing: 0.5px;
 }
 
 .viewAll {
   font-size: 14px;
   color: #c49a20;
-  text-decoration: none;
-  font-family: Arial, sans-serif;
+  cursor: pointer;
 }
 
+/* ROW */
 .row {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   overflow-x: auto;
   padding-bottom: 8px;
   scrollbar-width: none;
 }
 
-.row::-webkit-scrollbar {
-  display: none;
-}
+.row::-webkit-scrollbar { display: none; }
 
-/* ── CARDS ── */
+/* CARDS */
 .card {
-  width: 200px;
+  width: 180px;
   flex-shrink: 0;
   background: none;
   border: 3px solid transparent;
@@ -138,119 +104,77 @@ button {
 }
 
 .card img {
-  width: 100%;
-  height: 300px;
+  width: 180px;
+  height: 270px;
   object-fit: cover;
   display: block;
 }
 
 .cardTitle {
-  padding: 10px 4px 4px;
-  font-size: 15px;
-  font-family: Arial, sans-serif;
+  padding: 8px 4px 4px;
+  font-size: 14px;
   color: #111;
   font-weight: 400;
 }
 
 .cardDuration {
   position: absolute;
-  bottom: 36px;
-  right: 6px;
+  bottom: 30px;
+  right: 4px;
   background: rgba(0,0,0,0.75);
-  color: white;
-  font-size: 12px;
-  padding: 2px 6px;
-  font-family: Arial, sans-serif;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 5px;
 }
 
-.card.focused,
-.card:focus {
+.card.focused {
   border-color: #c49a20;
   transform: scale(1.05);
   outline: none;
 }
 
-/* ── DETAIL PAGE ── */
+/* DETAIL */
 .detail {
-  padding: 48px;
-  max-width: 1200px;
+  padding: 48px 40px;
 }
 
 .detailBody {
   display: flex;
-  gap: 80px;
-  margin-top: 0;
+  gap: 60px;
   align-items: flex-start;
 }
 
-.detailLeft {
-  flex: 1;
-}
+.detailLeft { flex: 1; }
 
 .detailLeft h2 {
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 900;
-  font-family: Arial Black, sans-serif;
+  font-family: 'Arial Black', Arial, sans-serif;
   margin-bottom: 12px;
   line-height: 1.1;
 }
 
-.detailLeft .availability {
-  font-style: italic;
-  font-size: 15px;
-  color: #555;
-  margin-bottom: 8px;
-}
-
 .meta {
-  font-size: 15px;
-  color: #555;
+  font-size: 14px;
+  color: #666;
   margin-bottom: 20px;
-  font-family: Arial, sans-serif;
 }
 
 .detailLeft p {
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.7;
   color: #333;
   margin-bottom: 32px;
-  max-width: 500px;
+  max-width: 480px;
 }
 
 .detailActions {
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 14px 24px;
-  font-size: 15px;
-  font-family: Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: opacity 0.2s, outline 0.1s;
-  background: #c49a20;
-  color: white;
-}
-
-.btn:focus,
-.btn.focused {
-  outline: 3px solid #111;
-  outline-offset: 3px;
-}
-
-.btn.secondary {
-  background: #f0f0f0;
-  color: #111;
 }
 
 .detailRight {
-  width: 380px;
+  width: 320px;
   flex-shrink: 0;
 }
 
@@ -260,35 +184,43 @@ button {
   display: block;
 }
 
-.detailThumb {
-  position: relative;
-}
-
 .detailThumbLabel {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background: #c49a20;
-  color: white;
-  padding: 10px 16px;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
+  color: #fff;
+  padding: 8px 14px;
+  font-size: 13px;
   font-weight: 700;
 }
 
-/* ── PLAYER ── */
-.player {
-  padding: 48px;
-  background: #000;
-  min-height: 100vh;
-  color: white;
+/* BUTTONS */
+.btn {
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  background: #c49a20;
+  color: #fff;
+  font-family: Arial, sans-serif;
 }
 
-.player h2 {
-  margin-bottom: 24px;
-  font-size: 28px;
+.btn.secondary {
+  background: #eee;
+  color: #111;
 }
+
+/* PLAYER */
+.player {
+  padding: 40px;
+  background: #000;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.player h2 { margin-bottom: 20px; font-size: 24px; }
 
 .player video {
   width: 100%;
@@ -296,27 +228,102 @@ button {
   margin-top: 16px;
 }
 
-.hint {
-  margin-top: 20px;
-  opacity: 0.5;
-  font-size: 13px;
-  font-family: Arial, sans-serif;
-}
-
-/* ── HEADER OVERRIDE ── */
-.appHeader {
+/* LOGIN PAGE */
+.loginPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   display: flex;
   align-items: center;
-  padding: 16px 40px;
-  border-bottom: 1px solid #e8e8e8;
-  background: #ffffff;
+  justify-content: center;
+  padding: 40px;
 }
 
-.klassikiLogo {
+.loginCard {
+  background: #fff;
+  padding: 60px 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+}
+
+.loginCard h1 {
   font-size: 32px;
-  font-weight: 900;
-  letter-spacing: 3px;
+  color: #111;
+  margin-bottom: 32px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+}
+
+.loginInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.loginInput {
+  padding: 18px 20px;
+  font-size: 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: #fafbfc;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.loginInput:focus {
+  outline: none;
+  border-color: #c49a20;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(196, 154, 32, 0.1);
+}
+
+.loginButton {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #c49a20 0%, #f4b33a 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 600;
   text-transform: uppercase;
-  font-family: 'Arial Black', Arial, sans-serif;
-  line-height: 1;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.loginButton:hover,
+.loginButton:focus {
+  background: linear-gradient(135deg, #b0891a 0%, #e0a430 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(196, 154, 32, 0.4);
+}
+
+.loginButton:active {
+  transform: translateY(0);
+}
+
+.error {
+  color: #e8173a;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.hint {
+  margin-top: 28px;
+  color: #666;
+  font-size: 14px;
+  opacity: 0.8;
+  letter-spacing: 0.3px;
+}
+
+/* TV Focus */
+.loginInput:focus-visible,
+.loginButton:focus-visible {
+  outline: 3px solid #c49a20;
+  outline-offset: 2px;
 }

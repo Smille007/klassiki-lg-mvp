@@ -7,7 +7,7 @@ export const films = [
     director: 'Mikhail Kalatozov',
     durationMinutes: 97,
     description: 'A young woman\'s fiancé enlists to fight in World War II. A sweeping, visually breathtaking love story and one of the greatest Soviet films ever made.',
-    imageUrl: '../assets/The_Cranes_Are_Flying.jpg',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/en/4/4d/Letyat_Zhuravli.jpg',
     videoUrl: 'https://archive.org/download/the-cranes-are-flying-1957/The%20Cranes%20Are%20Flying%20(1957).mp4'
   },
   {
@@ -63,6 +63,6 @@ export const films = [
     durationMinutes: 66,
     description: 'A poignant portrait of innocence and experience, Arūnas Žebriūnas ’ exquisite drama captures the inner world of childhood with unusual clarity. Six-year-old Inga (Inga Mickytė) lives with her devoted but melancholy single mother (Lilija Žadeikytė), passing her days in carefree play with the neighbourhood children. But a cruel remark about her appearance from a newcomer into this idyllic world shatters young Inga’s sense of self, forcing her to reckon with the realities of the world around her for the first time. Perhaps the pinnacle of Žebriūnas’ much-loved canon of children’s cinema, with a charming score from Viačeslavas Ganelinas.',
     imageUrl: 'https://vhx.imgix.net/klassiki/assets/5e797898-761e-4022-b02a-9053d625a5da.jpg?auto=format%2Ccompress&amp;fit=crop&amp;h=720&amp;q=75&amp;w=1280',
-    videoUrl: 'https://youtu.be/dPB4vX81psg?si=iUEGzNPky_kg-9Q4'
+    videoUrl: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8'
   }
 ];

@@ -302,3 +302,21 @@ button {
   font-size: 13px;
   font-family: Arial, sans-serif;
 }
+
+/* ── HEADER OVERRIDE ── */
+.appHeader {
+  display: flex;
+  align-items: center;
+  padding: 16px 40px;
+  border-bottom: 1px solid #e8e8e8;
+  background: #ffffff;
+}
+
+.klassikiLogo {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: 'Arial Black', Arial, sans-serif;
+  line-height: 1;
+}

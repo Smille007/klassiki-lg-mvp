@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0b0b0f;
+  color: #fff;
+}
+
+.appHeader {
+  padding: 24px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.appMain {
+  padding: 24px;
+}
+
+.home h2,
+.detail h2,
+.player h2 {
+  margin-bottom: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+}
+
+.card {
+  width: 220px;
+  background: #141420;
+  border: 3px solid transparent;
+  color: white;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cardTitle {
+  padding: 12px;
+  font-size: 18px;
+}
+
+.card.focused {
+  border-color: #5aa7ff;
+  transform: scale(1.05);
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 18px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.btn.primary {
+  background: #5aa7ff;
+}
+
+.detailBody {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.poster {
+  width: 280px;
+  height: auto;
+}
+
+.detailText {
+  flex: 1;
+}
+
+.meta {
+  color: #aaa;
+  margin-bottom: 16px;
+}
+
+.hint {
+  margin-top: 16px;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.player video {
+  margin-top: 16px;
+}

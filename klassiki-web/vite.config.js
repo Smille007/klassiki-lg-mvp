@@ -3,5 +3,17 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  server: { host: '0.0.0.0', port: 5173 }
+  base: './',
+  server: {
+    host: '0.0.0.0',
+    port: 5173
+  },
+  build: {
+    target: 'es2015',
+    rollupOptions: {
+      output: {
+        format: 'iife'  // Use IIFE instead of ES modules
+      }
+    }
+  }
 });

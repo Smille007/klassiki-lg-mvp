@@ -1,34 +1,75 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* ================================================
+   KLASSIKI — index.css
+   Responsive: browser + LG TV (1920×1080)
+   ================================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+}
 
 body {
   font-family: Arial, sans-serif;
   background: #fff;
   color: #111;
+  height: 100%;
 }
 
-/* HEADER */
+/* ── APP SHELL ── */
+.app {
+  height: 100vh;          /* was min-height: 100vh */
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ── HEADER ── */
 .appHeader {
-  padding: 16px 40px;
+  padding: 1.6rem 4rem;
   border-bottom: 1px solid #e0e0e0;
   background: #fff;
+  flex-shrink: 0;
 }
 
 .klassikiLogo {
-  font-size: 28px;
+  font-size: 2.8rem;
   font-weight: 900;
-  letter-spacing: 3px;
+  letter-spacing: 0.3rem;
   font-family: 'Arial Black', Arial, sans-serif;
+  line-height: 1;
 }
 
-/* HERO */
+/* ── MAIN ── */
+.appMain {
+  flex: 1;
+  min-height: 0;          /* ADD THIS — critical for flex children */
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+
+/* ── HOME ── */
+.home {
+  width: 100%;
+}
+
+/* ── HERO ── */
 .hero {
   position: relative;
-  height: 380px;
+  height: 280px;
   overflow: hidden;
   background: #111;
   display: flex;
   align-items: flex-end;
-  padding: 40px;
+  padding: 3rem 4rem;
 }
 
 .heroBg {
@@ -37,7 +78,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 .heroText {
@@ -47,50 +88,50 @@ body {
 }
 
 .heroText h1 {
-  font-size: 40px;
+  font-size: 3.2rem;
   font-weight: 900;
   text-transform: uppercase;
   font-family: 'Arial Black', Arial, sans-serif;
   max-width: 600px;
   line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
-/* SECTIONS */
+/* ── SECTIONS ── */
 .section {
-  padding: 32px 40px;
+  padding: 2.4rem 4rem;
 }
 
 .sectionHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.6rem;
 }
 
 .sectionTitle {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
 
 .viewAll {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #c49a20;
   cursor: pointer;
 }
 
-/* ROW */
+/* ── ROW ── */
 .row {
   display: flex;
-  gap: 16px;
+  gap: 1.6rem;
   overflow-x: auto;
-  padding-bottom: 8px;
+  padding-bottom: 1rem;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
-
 .row::-webkit-scrollbar { display: none; }
 
-/* CARDS */
+/* ── CARDS ── */
 .card {
   width: 180px;
   flex-shrink: 0;
@@ -99,8 +140,9 @@ body {
   padding: 0;
   text-align: left;
   cursor: pointer;
-  transition: transform 0.2s, border-color 0.2s;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
   position: relative;
+  outline: none;
 }
 
 .card img {
@@ -111,78 +153,74 @@ body {
 }
 
 .cardTitle {
-  padding: 8px 4px 4px;
-  font-size: 14px;
+  padding: 0.8rem 0.4rem 0.4rem;
+  font-size: 1.4rem;
   color: #111;
   font-weight: 400;
+  line-height: 1.3;
 }
 
 .cardDuration {
   position: absolute;
-  bottom: 30px;
+  bottom: 32px;
   right: 4px;
-  background: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.78);
   color: #fff;
-  font-size: 11px;
+  font-size: 1.1rem;
   padding: 2px 5px;
+  border-radius: 2px;
 }
 
 .card.focused {
-  border-color: transparent;
-  transform: none;
-  outline: none;
-}
-.card:hover {
   border-color: #c49a20;
-  transform: scale(1.05);
+  transform: scale(1.06);
+  box-shadow: 0 0 0 3px rgba(196,154,32,0.35),
+              0 6px 20px rgba(0,0,0,0.2);
+  z-index: 10;
 }
 
-
-
-
-
-/* DETAIL */
+/* ── DETAIL ── */
 .detail {
-  padding: 48px 40px;
+  padding: 4rem;
 }
 
 .detailBody {
   display: flex;
-  gap: 60px;
+  gap: 4rem;
   align-items: flex-start;
 }
 
 .detailLeft { flex: 1; }
 
 .detailLeft h2 {
-  font-size: 36px;
+  font-size: 3.2rem;
   font-weight: 900;
   font-family: 'Arial Black', Arial, sans-serif;
-  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
   line-height: 1.1;
 }
 
 .meta {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .detailLeft p {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: #333;
-  margin-bottom: 32px;
+  margin-bottom: 2.8rem;
   max-width: 480px;
 }
 
 .detailActions {
   display: flex;
-  gap: 12px;
+  gap: 1.2rem;
 }
 
 .detailRight {
-  width: 320px;
+  width: 280px;
   flex-shrink: 0;
 }
 
@@ -195,17 +233,17 @@ body {
 .detailThumbLabel {
   background: #c49a20;
   color: #fff;
-  padding: 8px 14px;
-  font-size: 13px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
-/* BUTTONS */
+/* ── BUTTONS ── */
 .btn {
-  padding: 12px 22px;
-  font-size: 14px;
+  padding: 1.2rem 2.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
@@ -213,6 +251,15 @@ body {
   background: #c49a20;
   color: #fff;
   font-family: Arial, sans-serif;
+  transition: transform 0.15s, box-shadow 0.15s;
+  outline: none;
+}
+
+.btn:focus, .btn.focused {
+  outline: 3px solid #c49a20;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(196,154,32,0.25);
+  transform: scale(1.04);
 }
 
 .btn.secondary {
@@ -220,36 +267,46 @@ body {
   color: #111;
 }
 
-/* PLAYER */
+/* ── PLAYER ── */
 .player {
-  padding: 40px;
   background: #000;
-  min-height: 100vh;
+  flex: 1;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 4rem;
 }
 
-.player h2 { margin-bottom: 20px; font-size: 24px; }
+.player h2 {
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+}
 
 .player video {
   width: 100%;
-  max-height: 75vh;
-  margin-top: 16px;
+  flex: 1;
+  object-fit: contain;
+  background: #000;
+  margin-top: 1.6rem;
 }
 
-/* LOGIN PAGE */
+/* ── LOGIN — centered properly ── */
 .loginPage {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  flex: 1;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 4rem;
 }
+
+
 
 .loginCard {
   background: #fff;
-  padding: 60px 40px;
-  border-radius: 16px;
+  padding: 6rem 4rem;
+  border-radius: 1.6rem;
   box-shadow: 0 20px 60px rgba(0,0,0,0.1);
   text-align: center;
   max-width: 420px;
@@ -257,81 +314,134 @@ body {
 }
 
 .loginCard h1 {
-  font-size: 32px;
+  font-size: 3.2rem;
   color: #111;
-  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
   font-weight: 300;
-  letter-spacing: -0.5px;
 }
 
 .loginInputs {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 24px;
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
 }
 
 .loginInput {
-  padding: 18px 20px;
-  font-size: 18px;
+  padding: 1.8rem 2rem;
+  font-size: 1.8rem;
   border: 2px solid #e0e0e0;
-  border-radius: 12px;
+  border-radius: 1.2rem;
   background: #fafbfc;
   transition: all 0.3s ease;
   font-family: inherit;
+  outline: none;
 }
 
-.loginInput:focus {
-  outline: none;
+.loginInput:focus, .loginInput.focused {
   border-color: #c49a20;
   background: #fff;
-  box-shadow: 0 0 0 4px rgba(196, 154, 32, 0.1);
+  box-shadow: 0 0 0 4px rgba(196,154,32,0.1);
 }
 
 .loginButton {
   width: 100%;
-  padding: 18px;
+  padding: 1.8rem;
   background: linear-gradient(135deg, #c49a20 0%, #f4b33a 100%);
   color: #fff;
   border: none;
-  border-radius: 12px;
-  font-size: 20px;
+  border-radius: 1.2rem;
+  font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  outline: none;
 }
 
-.loginButton:hover,
-.loginButton:focus {
+.loginButton:focus, .loginButton.focused {
   background: linear-gradient(135deg, #b0891a 0%, #e0a430 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(196, 154, 32, 0.4);
-}
-
-.loginButton:active {
-  transform: translateY(0);
+  box-shadow: 0 0 0 5px rgba(196,154,32,0.25);
+  transform: scale(1.02);
 }
 
 .error {
   color: #e8173a;
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 
 .hint {
-  margin-top: 28px;
-  color: #666;
-  font-size: 14px;
+  color: #888;
+  font-size: 1.4rem;
   opacity: 0.8;
-  letter-spacing: 0.3px;
+  padding: 1.6rem 0;
+  text-align: center;
 }
 
-/* TV Focus */
-.loginInput:focus-visible,
-.loginButton:focus-visible {
-  outline: 3px solid #c49a20;
-  outline-offset: 2px;
+/* ================================================
+   TV OVERRIDES — 1280px+ (LG TV 1920×1080)
+   ================================================ */
+
+@media (min-width: 1900px) {
+
+  html, body { height: 100%; overflow: hidden; }
+
+  .app {
+    width: 1920px;
+    height: 1080px;
+    min-height: unset;
+    overflow: hidden;
+  }
+
+  .appMain {
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  .appMain::-webkit-scrollbar { display: none; }
+
+  .appHeader { padding: 2rem 8rem; }
+  .klassikiLogo { font-size: 4.2rem; letter-spacing: 0.4rem; }
+
+  .hero { height: 420px; padding: 4rem 8rem; }
+  .heroText h1 { font-size: 6rem; max-width: 900px; }
+
+  .section { padding: 3.2rem 8rem; }
+  .sectionTitle { font-size: 2.8rem; }
+  .viewAll { font-size: 2rem; }
+  .row { gap: 2.4rem; }
+
+  .card { width: 240px; }
+  .card img { width: 240px; height: 360px; }
+  .cardTitle { font-size: 1.8rem; }
+  .card.focused { transform: scale(1.08); }
+
+  .detail { padding: 6rem 8rem; }
+  .detailLeft h2 { font-size: 5rem; }
+  .meta { font-size: 2rem; }
+  .detailLeft p { font-size: 2.2rem; max-width: 680px; }
+  .detailRight { width: 420px; }
+
+  .btn { padding: 1.6rem 3.2rem; font-size: 2rem; min-width: 18rem; }
+
+  .player { width: 1920px; height: 1080px; padding: 4rem 8rem; }
+  .player h2 { font-size: 3rem; }
+
+.loginPage {
+  flex: 1;
+  width: 100%;
+  min-height: unset;
+  height: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  .loginCard { width: 580px; max-width: unset; padding: 8rem 6rem; }
+  .loginCard h1 { font-size: 4.8rem; }
+  .loginInput { padding: 2.4rem 2.8rem; font-size: 2.4rem; }
+  .loginButton { padding: 2.4rem; font-size: 2.6rem; }
+  .hint { font-size: 1.8rem; }
 }

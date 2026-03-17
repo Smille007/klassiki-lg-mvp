@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { films } from '../data/films';
 
@@ -6,6 +6,16 @@ export default function Home() {
   const navigate = useNavigate();
   const items = useMemo(() => films, []);
   const [focusIndex, setFocusIndex] = useState(0);
+  const cardRefs = useRef([]);
+
+  // Auto-scroll focused card into view
+  useEffect(() => {
+    cardRefs.current[focusIndex]?.scrollIntoView({
+      behavior: 'smooth',
+      inline: 'center',
+      block: 'nearest',
+    });
+  }, [focusIndex]);
 
   useEffect(() => {
     const onKeyDown = (e) => {
@@ -44,6 +54,7 @@ export default function Home() {
             <button
               key={film.id}
               className={`card ${idx === focusIndex ? 'focused' : ''}`}
+              ref={(el) => (cardRefs.current[idx] = el)}
               onClick={() => navigate(`/film/${film.id}`)}
             >
               <img src={film.imageUrl} alt={film.title} />
@@ -60,7 +71,7 @@ export default function Home() {
           <span className="viewAll">View all</span>
         </div>
         <div className="row">
-          {[...items].reverse().map((film, idx) => (
+          {[...items].reverse().map((film) => (
             <button
               key={film.id + '-new'}
               className="card"
@@ -74,7 +85,7 @@ export default function Home() {
         </div>
       </div>
 
-      <p className="hint" style={{padding: '0 48px 32px'}}>Use ← → and Enter to navigate</p>
+      <p className="hint">Use ← → and Enter to navigate</p>
     </div>
   );
 }

@@ -28,7 +28,7 @@ export default function Login() {
   return (
     <div className="loginPage">
       <div className="loginCard">
-        <div className="klassikiLogo" style={{fontSize:'36px', marginBottom:'24px'}}>
+        <div className="klassikiLogo" style={{marginBottom:'24px'}}>
           <span style={{color:'#e8173a'}}>K</span>
           <span style={{color:'#f5a623'}}>L</span>
           <span style={{color:'#4a90d9'}}>A</span>

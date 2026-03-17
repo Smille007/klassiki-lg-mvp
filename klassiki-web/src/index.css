@@ -128,10 +128,18 @@ body {
 }
 
 .card.focused {
-  border-color: #c49a20;
-  transform: scale(1.05);
+  border-color: transparent;
+  transform: none;
   outline: none;
 }
+.card:hover {
+  border-color: #c49a20;
+  transform: scale(1.05);
+}
+
+
+
+
 
 /* DETAIL */
 .detail {

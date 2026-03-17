@@ -24,11 +24,10 @@ body {
 
 /* ── APP SHELL ── */
 .app {
-  height: 100vh;          /* was min-height: 100vh */
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
 
 /* ── HEADER ── */
 .appHeader {
@@ -49,12 +48,11 @@ body {
 /* ── MAIN ── */
 .appMain {
   flex: 1;
-  min-height: 0;          /* ADD THIS — critical for flex children */
+  min-height: 0;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
 }
-
 
 /* ── HOME ── */
 .home {
@@ -171,7 +169,17 @@ body {
   border-radius: 2px;
 }
 
+/* TV remote focus */
 .card.focused {
+  border-color: #c49a20;
+  transform: scale(1.06);
+  box-shadow: 0 0 0 3px rgba(196,154,32,0.35),
+              0 6px 20px rgba(0,0,0,0.2);
+  z-index: 10;
+}
+
+/* Browser mouse hover */
+.card:hover {
   border-color: #c49a20;
   transform: scale(1.06);
   box-shadow: 0 0 0 3px rgba(196,154,32,0.35),
@@ -255,6 +263,11 @@ body {
   outline: none;
 }
 
+.btn:hover {
+  background: #b0891a;
+  transform: scale(1.02);
+}
+
 .btn:focus, .btn.focused {
   outline: 3px solid #c49a20;
   outline-offset: 2px;
@@ -265,6 +278,10 @@ body {
 .btn.secondary {
   background: #eee;
   color: #111;
+}
+
+.btn.secondary:hover {
+  background: #ddd;
 }
 
 /* ── PLAYER ── */
@@ -290,7 +307,7 @@ body {
   margin-top: 1.6rem;
 }
 
-/* ── LOGIN — centered properly ── */
+/* ── LOGIN ── */
 .loginPage {
   flex: 1;
   width: 100%;
@@ -300,8 +317,6 @@ body {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
   padding: 4rem;
 }
-
-
 
 .loginCard {
   background: #fff;
@@ -381,7 +396,7 @@ body {
 }
 
 /* ================================================
-   TV OVERRIDES — 1280px+ (LG TV 1920×1080)
+   TV OVERRIDES — 1900px+ (LG TV 1920×1080)
    ================================================ */
 
 @media (min-width: 1900px) {
@@ -416,6 +431,7 @@ body {
   .card img { width: 240px; height: 360px; }
   .cardTitle { font-size: 1.8rem; }
   .card.focused { transform: scale(1.08); }
+  .card:hover { transform: scale(1.08); }
 
   .detail { padding: 6rem 8rem; }
   .detailLeft h2 { font-size: 5rem; }
@@ -428,16 +444,15 @@ body {
   .player { width: 1920px; height: 1080px; padding: 4rem 8rem; }
   .player h2 { font-size: 3rem; }
 
-.loginPage {
-  flex: 1;
-  width: 100%;
-  min-height: unset;
-  height: unset;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+  .loginPage {
+    flex: 1;
+    width: 100%;
+    min-height: unset;
+    height: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .loginCard { width: 580px; max-width: unset; padding: 8rem 6rem; }
   .loginCard h1 { font-size: 4.8rem; }

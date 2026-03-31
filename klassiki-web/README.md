@@ -107,5 +107,5 @@ Potential improvements for a production build:
 
 ## Built by
 
-[Daryna Diaz](https://www.linkedin.com/in/daryna-diaz) — Full-Stack Developer  
+[Daryna Diaz](https://www.linkedin.com/in/daryna-v-17469169/) — Full-Stack Developer  
 Pursuit Academy graduate · New York, NY

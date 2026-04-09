@@ -5,7 +5,7 @@ import { films } from '../data/films';
 export default function Home() {
   const navigate = useNavigate();
   const items = useMemo(() => films, []);
-  const [focusIndex, setFocusIndex] = useState(0);
+  const [focusIndex, setFocusIndex] = useState-10);
   const cardRefs = useRef([]);
 
   // Auto-scroll focused card into view
